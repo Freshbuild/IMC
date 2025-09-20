@@ -650,7 +650,6 @@
             setTimeout(() => {
                 const weight = parseFloat(document.getElementById('weight').value);
                 const height = parseFloat(document.getElementById('height').value) / 100;
-                const age = parseInt(document.getElementById('age').value);
                 const gender = document.getElementById('gender').value;
                 
                 // Calcul de l'IMC
@@ -690,7 +689,7 @@
                 document.getElementById('result').classList.remove('hidden');
                 
                 // Génération des conseils
-                generateAdvice(currentCategory, gender, age);
+                generateAdvice(currentCategory, gender);
                 
                 // Restaurer le bouton
                 btnText.textContent = originalText;
